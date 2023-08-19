@@ -1,6 +1,6 @@
 import loading from '../../img/loading.svg'
 
-import styles from './Loandig.module.css'
+import styles from './Loading.module.css'
 
 function Loading () {  
     return (
