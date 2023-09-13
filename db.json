@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "Teste",
-      "budget": "1200",
+      "name": "Teste editado",
+      "budget": "1300",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
