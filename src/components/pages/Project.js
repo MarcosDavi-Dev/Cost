@@ -3,7 +3,6 @@ import Loading from '../layout/Loading'
 
 import {useParams} from 'react-router-dom'
 import {useState, useEffect} from 'react'
-import Container from '../layout/Container'
 import Message from '../layout/Message'
 import ProjectForm from '../project/ProjectForm'
 
@@ -13,6 +12,7 @@ function Project () {
 
      const [project, setProject] = useState([])
      const [showProjectForm, setShowProjectForm] = useState(false)
+     const [showServiceForm, setShowServiceForm] = useState(false)
      const [message, setMessage] = useState()
      const [type, setType] = useState()
 
@@ -57,13 +57,16 @@ function Project () {
  }
 
  function toggleProjectForm () {
-  setShowProjectForm(!showProjectForm)  }
+  setShowProjectForm(!showProjectForm) }
 
+ function toggleServiceForm () {
+    setShowServiceForm(!showServiceForm) }
+  
      return (
      <>
      {project.name ? (
          <div className={styles.project_details}>
-             <Container customnClass="column">
+             <div className={styles.project_container}>
              {message && <Message type={type} msg={message} />}
              <div className={styles.details_container}>
              <h1>Projeto: {project.name}</h1>
@@ -88,7 +91,20 @@ function Project () {
                      </div>
                  )}
                  </div>
-             </Container>
+                 <div className={styles.service_form_container}>
+                 <h2>Adicione um serviço:</h2>
+                    <button className={styles.btn} onClick={toggleServiceForm}>
+                    {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
+                    </button>
+                    <div className={styles.project_info}>
+                    {showServiceForm && <div>formulário de serviço</div>}
+                    </div>
+                 </div>
+                <h2>Serviços</h2>
+                <div className={styles.start}>
+                    <p>Itens de serviços</p>
+                </div>
+             </div>
      </div>
      ) : (<Loading />)
      }</>)
