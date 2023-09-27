@@ -5,6 +5,7 @@ import {useParams} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import Message from '../layout/Message'
 import ProjectForm from '../project/ProjectForm'
+import ServiceForm from '../service/ServiceForm'
 
 function Project () {
 
@@ -56,6 +57,10 @@ function Project () {
     .catch(err => console.log(err))
  }
 
+ function createService () {
+    
+ }
+
  function toggleProjectForm () {
   setShowProjectForm(!showProjectForm) }
 
@@ -97,7 +102,13 @@ function Project () {
                     {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
                     </button>
                     <div className={styles.project_info}>
-                    {showServiceForm && <div>formulário de serviço</div>}
+                    {showServiceForm && (
+                        <ServiceForm 
+                            handleSubmit={createService}
+                            btnText="Adicionar serviço"
+                            projectData={project}
+                        />
+                    )}
                     </div>
                  </div>
                 <h2>Serviços</h2>
