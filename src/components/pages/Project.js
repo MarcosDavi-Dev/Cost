@@ -34,6 +34,8 @@ function Project () {
  }, [id])
 
  function editPost(project) {
+    setMessage(' ')
+
     // budget validation
     if (project.budget < project.cost) {
         setMessage('O orçamento não pode ser menor que o custo do projeto!')
@@ -59,7 +61,7 @@ function Project () {
  }
 
  function createService () {
-    
+    setMessage(' ')
     // last service
     const lastService = project.services[project.services.length - 1]
 
@@ -74,9 +76,26 @@ function Project () {
         setMessage('Orçamento ultrapassado, verifique o valor do serviço')
         setType('error')
         project.services.pop()
-        return
+        return false
     }
 
+    // add service cost to project total cost
+    project.cost = newCost
+
+    // update project
+    fetch(`http://localhost:5000/projects/${project.id}`,{
+        method: 'PATCH',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(project)
+    })
+    .then((resp) => resp.json())
+    .then((data) => (
+        //exibir os serviços
+        console.log(data)
+    ))
+    .catch(err => console.log(err))
  }
 
  function toggleProjectForm () {
