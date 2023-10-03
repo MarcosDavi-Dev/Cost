@@ -1,3 +1,4 @@
+import {parse, v4 as uuidv4} from 'uuid'
 import styles from './Project.module.css'
 import Loading from '../layout/Loading'
 
@@ -59,6 +60,23 @@ function Project () {
 
  function createService () {
     
+    // last service
+    const lastService = project.services[project.services.length - 1]
+
+    lastService.id = uuidv4()
+
+    const lastServiceCost = lastService.cost
+
+    const newCost = parseFloat(project.cost) + parseFloat (lastServiceCost) 
+
+    // maximum value validation
+    if(newCost > parseFloat(project.budget)){
+        setMessage('Orçamento ultrapassado, verifique o valor do serviço')
+        setType('error')
+        project.services.pop()
+        return
+    }
+
  }
 
  function toggleProjectForm () {
