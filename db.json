@@ -7,13 +7,19 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 100,
+      "cost": 600,
       "services": [
         {
           "name": "Novo serviço",
           "cost": "100",
           "description": "Teste",
           "id": "3afe4b91-1c53-4ea8-ac97-38b7bf25ae1c"
+        },
+        {
+          "name": "Contratar DEV PHP",
+          "cost": "500",
+          "description": "Irar criar a função de enviar emails",
+          "id": "8730646b-642a-4197-bfb6-1accf32ef3a0"
         }
       ],
       "id": 1
@@ -28,28 +34,6 @@
       "cost": 0,
       "services": [],
       "id": 2
-    },
-    {
-      "name": "CSS com estilo",
-      "budget": "15000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "Pensando",
-      "budget": "5000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
     }
   ],
   "categories": [
