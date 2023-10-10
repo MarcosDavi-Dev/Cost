@@ -8,6 +8,7 @@ import Message from '../layout/Message'
 import ProjectForm from '../project/ProjectForm'
 import ServiceForm from '../service/ServiceForm'
 import ServiceCard from '../service/ServiceCard'
+import Container from '../layout/Container'
 
 function Project () {
 
@@ -95,8 +96,7 @@ function Project () {
     })
     .then((resp) => resp.json())
     .then((data) => (
-        //exibir os serviços
-        console.log(data)
+        setShowServiceForm(false)
     ))
     .catch(err => console.log(err))
  }
@@ -113,7 +113,7 @@ function Project () {
      <>
      {project.name ? (
          <div className={styles.project_details}>
-             <div className={styles.project_container}>
+             <div>
              {message && <Message type={type} msg={message} />}
              <div className={styles.details_container}>
              <h1>Projeto: {project.name}</h1>
@@ -154,7 +154,7 @@ function Project () {
                     </div>
                  </div>
                 <h2>Serviços</h2>
-                <div className={styles.start}>
+                <Container customClass="start" >
                     {services.length > 0 &&
                         services.map((service) => (
                             <ServiceCard 
@@ -168,7 +168,7 @@ function Project () {
                         ))
                     }
                     {services.length === 0 && <p>Não há serviços cadastrados.</p>}
-                </div>
+                </Container>
              </div>
      </div>
      ) : (<Loading />)

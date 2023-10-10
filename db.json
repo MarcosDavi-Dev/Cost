@@ -7,7 +7,7 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 600,
+      "cost": 1100,
       "services": [
         {
           "name": "Novo serviço",
@@ -31,8 +31,27 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 720,
+      "services": [
+        {
+          "name": "Dev PHP",
+          "cost": "500",
+          "description": "Irar criar a função de enviar emails",
+          "id": "4ddf669f-ae26-4e25-b81e-6c63b67a0636"
+        },
+        {
+          "name": "Front End",
+          "cost": "100",
+          "description": "Criar layout dos butôes",
+          "id": "ac65c939-0dc4-411d-b6e4-ab56fb82ac98"
+        },
+        {
+          "name": "Teste",
+          "cost": "120",
+          "description": "",
+          "id": "0893a8b8-fe71-4db5-9238-005d45162342"
+        }
+      ],
       "id": 2
     }
   ],
