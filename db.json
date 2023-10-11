@@ -1,58 +1,15 @@
 {
   "projects": [
     {
-      "name": "Teste editado",
-      "budget": "1302",
+      "name": "Teste",
+      "budget": "5000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "1",
+        "name": "Infra"
       },
-      "cost": 1100,
-      "services": [
-        {
-          "name": "Novo serviço",
-          "cost": "100",
-          "description": "Teste",
-          "id": "3afe4b91-1c53-4ea8-ac97-38b7bf25ae1c"
-        },
-        {
-          "name": "Contratar DEV PHP",
-          "cost": "500",
-          "description": "Irar criar a função de enviar emails",
-          "id": "8730646b-642a-4197-bfb6-1accf32ef3a0"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": 1
-    },
-    {
-      "name": "Davi",
-      "budget": "1210",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 720,
-      "services": [
-        {
-          "name": "Dev PHP",
-          "cost": "500",
-          "description": "Irar criar a função de enviar emails",
-          "id": "4ddf669f-ae26-4e25-b81e-6c63b67a0636"
-        },
-        {
-          "name": "Front End",
-          "cost": "100",
-          "description": "Criar layout dos butôes",
-          "id": "ac65c939-0dc4-411d-b6e4-ab56fb82ac98"
-        },
-        {
-          "name": "Teste",
-          "cost": "120",
-          "description": "",
-          "id": "0893a8b8-fe71-4db5-9238-005d45162342"
-        }
-      ],
-      "id": 2
     }
   ],
   "categories": [
